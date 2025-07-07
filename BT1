@@ -4,7 +4,7 @@ end
 
 
 local whitelist = {
-	["2A4D954D-4C34-4041-9A61-5C033FC0B339"] = "B-User1",
+	["55E773C7-4DE6-4C39-8628-92C08CCA7EED"] = "Lave 1",
 	["091C52FC-2A49-4BBE-8FCD-64D25AEE61BB"] = "Vortex Owner",
 
 }
