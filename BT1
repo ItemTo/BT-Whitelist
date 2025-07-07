@@ -1,0 +1,38 @@
+local function getClientID()
+	return game:GetService("RbxAnalyticsService"):GetClientId() 
+end
+
+
+local whitelist = {
+	["2A4D954D-4C34-4041-9A61-5C033FC0B339"] = "B-User1",
+	["091C52FC-2A49-4BBE-8FCD-64D25AEE61BB"] = "Vortex Owner",
+
+}
+
+local clientID = getClientID()
+
+local Players = game:GetService("Players")
+local StarterGui = game:GetService("StarterGui")
+local player = Players.LocalPlayer
+
+if whitelist[clientID] then
+	local username = whitelist[clientID]
+	print("[✅ Whitelisted] Client ID:", clientID, "| ✅ Beta Login:", username)
+
+	StarterGui:SetCore("SendNotification", {
+		Title = "⚠️ Beta Whitelist ⚠️",
+		Text = "✅ Login: " .. username .. "!",
+		Duration = 5
+	})
+else
+	print("[❌ Nicht Whitelisted] Client ID:", clientID)
+
+	StarterGui:SetCore("SendNotification", {
+		Title = "❌ Oops, sorry!?",
+		Text = "Du bist nicht auf der Whitelist!",
+		Duration = 5
+	})
+
+	wait(3) 
+	player:Kick("❌ Oops, aber du bist nicht auf der Whitelist. ❌")
+end
