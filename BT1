@@ -8,6 +8,7 @@ local whitelist = {
 	["1CE8E793-241C-41E0-A738-63BD56147447"] = "Vortex Owner",
 	["b1513f88-db94-4b15-ba40-2509a3f0a823"] = "Deusces",
 	["9CD9ABC2-5078-4FE1-8F45-28893A485F77"] = "henry_henry_2025",
+	["FD1362CF-5512-4CD2-A31C-3D8FAFEAE135"] = "Levko",
 }
 
 local clientID = getClientID()
